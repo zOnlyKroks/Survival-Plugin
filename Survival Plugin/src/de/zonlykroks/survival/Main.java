@@ -1,27 +1,21 @@
 package de.zonlykroks.survival;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import de.zonlykroks.survival.api.CoinApi;
 import de.zonlykroks.survival.commands.BalanceCommand;
 import de.zonlykroks.survival.commands.GamemodeCommands;
 import de.zonlykroks.survival.commands.InventorySaveCommand;
 import de.zonlykroks.survival.commands.PayCommand;
 import de.zonlykroks.survival.commands.SoftReloadCommand;
-import de.zonlykroks.survival.commands.TpaCommand;
-import de.zonlykroks.survival.commands.TpaacceptCommand;
 import de.zonlykroks.survival.config.PlayerData;
 import de.zonlykroks.survival.config.PrefixConfig;
 import de.zonlykroks.survival.listeners.JoinListener;
@@ -37,6 +31,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	private PlayerData playerData;
 	
+	@SuppressWarnings("unused")
 	private PrefixConfig prefixConfig;
 	
 	public static HashMap<Player,Player> tpa = new HashMap<Player,Player>();

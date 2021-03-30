@@ -32,6 +32,7 @@ public class QuitListener implements Listener{
 		savePlayerInv(p, p.getWorld());
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void savePlayerInv(Player p, World w){
 	    File playerInvConfigFile = new File(Main.getPlugin().getDataFolder() + File.separator + "players" + File.separator + p.getName(), "inventory.yml");
 	    FileConfiguration pInv = YamlConfiguration.loadConfiguration(playerInvConfigFile);

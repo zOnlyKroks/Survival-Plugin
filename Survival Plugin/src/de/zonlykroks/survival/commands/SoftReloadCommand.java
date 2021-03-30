@@ -6,7 +6,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import de.zonlykroks.survival.Main;
-import de.zonlykroks.survival.config.AbstractConfigFile;
 
 public class SoftReloadCommand implements CommandExecutor{
 

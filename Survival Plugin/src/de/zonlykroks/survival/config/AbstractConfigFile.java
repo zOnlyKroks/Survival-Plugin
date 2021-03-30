@@ -3,7 +3,6 @@ package de.zonlykroks.survival.config;
 import java.io.File;
 import java.io.IOException;
 
-import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -17,7 +16,7 @@ public class AbstractConfigFile {
 	
 	public AbstractConfigFile(Main main, String fileName) {
 		this.main = main;
-		this.file = new File(main.getDataFolder(), fileName);
+		AbstractConfigFile.file = new File(main.getDataFolder(), fileName);
 		if(file.exists()) {
 			try {
 				file.createNewFile();
@@ -25,7 +24,7 @@ public class AbstractConfigFile {
 				e.printStackTrace();
 			}
 		}
-		this.config = YamlConfiguration.loadConfiguration(file);
+		AbstractConfigFile.config = YamlConfiguration.loadConfiguration(file);
 	}
 	
 	public void save() {

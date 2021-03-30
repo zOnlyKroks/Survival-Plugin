@@ -2,22 +2,16 @@ package de.zonlykroks.survival.listeners;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Random;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
-import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 
 import de.zonlykroks.survival.Main;
@@ -38,6 +32,7 @@ public class ScoreboardListener implements Listener{
 	public static void updater() {
 		new BukkitRunnable() {
 			
+			@SuppressWarnings("deprecation")
 			@Override
 			public void run() {
 				for(Scoreboard board : boards.keySet()) {
@@ -56,6 +51,7 @@ public class ScoreboardListener implements Listener{
 	}
 
 		
+		@SuppressWarnings("deprecation")
 		public static void sendScoreboard(Player p) {
 	
 

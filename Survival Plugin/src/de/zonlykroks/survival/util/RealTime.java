@@ -9,6 +9,7 @@ import de.zonlykroks.survival.Main;
 
 public class RealTime {
 	
+	@SuppressWarnings("deprecation")
 	public static void setRealTime() {
         Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(), () -> {
             Date date = new Date();
