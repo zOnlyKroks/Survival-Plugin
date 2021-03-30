@@ -1,0 +1,15 @@
+name: SurvivalPlugin
+version: 0.1
+author : zOnlyKroks
+api-version: 1.16
+main: de.zonlykroks.survival.Main
+
+commands:
+   tpa:
+   tpaccept:
+   gm:
+   balance:
+   pay:
+   saveallinventories:
+   softreload:
+   
