@@ -7,16 +7,16 @@ import org.bukkit.entity.Player;
 
 import de.zonlykroks.survival.Main;
 
-public class SoftReloadCommand implements CommandExecutor{
+public class SoftReloadCommand implements CommandExecutor {
 
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if(sender instanceof Player) {
-			Main.getPlugin().reloadConfig();
-			Player p = (Player) sender;
-			p.sendMessage("Die Configs wurden neu geladen");
-		}
-		return false;
-	}
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (sender instanceof Player) {
+            Main.getPlugin().reloadConfig();
+            Player p = (Player) sender;
+            p.sendMessage("Die Configs wurden neu geladen");
+        }
+        return false;
+    }
 
 }

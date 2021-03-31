@@ -8,13 +8,13 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 
 import de.zonlykroks.survival.config.PlayerData;
 
-public class PlayerDeathListener implements Listener{
-	
-	@EventHandler
-	public static void onDeath(PlayerDeathEvent event) {
-		Player p = event.getEntity().getPlayer();
-		PlayerData.setDeaths(p, p.getStatistic(Statistic.DEATHS) + 1);
-		PlayerData.setDeathCause(p, event.getEntity().getPlayer().getLastDamageCause());
-	}
+public class PlayerDeathListener implements Listener {
+
+    @EventHandler
+    public static void onDeath(PlayerDeathEvent event) {
+        Player p = event.getEntity().getPlayer();
+        PlayerData.setDeaths(p, p.getStatistic(Statistic.DEATHS) + 1);
+        PlayerData.setDeathCause(p, event.getEntity().getPlayer().getLastDamageCause());
+    }
 
 }
